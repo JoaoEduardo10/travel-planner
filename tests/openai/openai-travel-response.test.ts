@@ -17,11 +17,11 @@ describe("OpenaiTravelResponse", () => {
 
   it("should return a gpt chat response", async () => {
     const travelResponse = await openaiTravelResponse.getTravelResponse(
-      "retorne para mim esta palavara 'test' com a letra t sempre minuscula"
+      "retorne para mim esta palavara test com a letra t sempre minuscula e sempre completa"
     );
 
     expect(travelResponse).toBeTruthy();
-    expect(travelResponse).toEqual("test");
+    expect(travelResponse).toBe("test");
   }, 10000);
 
   it("should return an error when trying to return a responsee", async () => {
