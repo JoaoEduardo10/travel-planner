@@ -1,5 +1,5 @@
 import { OpenaiTravelResponse } from "../../../src/openai/openai-travel-response";
-import { Travel_itinerary } from "../../../src/services/Travel_itinerary/travel-itinerary";
+import { Travel_itinerary } from "../../../src/services/travel_itinerary/travel-itinerary";
 
 describe("Travel_itinerary", () => {
   it("should return a travel plan", async () => {
@@ -14,5 +14,5 @@ describe("Travel_itinerary", () => {
     });
 
     expect(travel_itinerary).toBeTruthy();
-  }, 30000);
+  }, 20000);
 });
