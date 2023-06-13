@@ -3,3 +3,8 @@ export interface Travel_itineraryDTO {
   start_date: string;
   end_date: string;
 }
+
+export interface WeatherDTO {
+  destination: string;
+  start_date: string;
+}
