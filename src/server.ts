@@ -1,7 +1,7 @@
 import express from "express";
 import "dotenv/config";
 import { OpenaiTravelResponse } from "./openai/openai-travel-response";
-import { Travel_itinerary } from "./services/Travel_itinerary/travel-itinerary";
+import { Violence_info } from "./services/violence_info/violence-info";
 
 const server = express();
 server.use(express.json());
@@ -9,11 +9,11 @@ server.use(express.json());
 server.post("/plan", async (req, res) => {
   const openaiTravelResponse = new OpenaiTravelResponse();
 
-  const travel = new Travel_itinerary(openaiTravelResponse);
+  const violence_info = new Violence_info(openaiTravelResponse);
 
-  const travel_itinerary = await travel.getTravel_itinerary(req.body);
+  const violence_infoDTO = await violence_info.getViolence_info(req.body);
 
-  res.status(201).json(travel_itinerary);
+  res.status(201).json(violence_infoDTO);
 });
 
 const port = process.env.PORT;
