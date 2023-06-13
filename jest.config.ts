@@ -20,15 +20,7 @@ export default {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: [
-    "src/server/controllers/**/*.ts",
-    "src/server/middlewares/**/*.ts",
-    "src/server/repositories/**/*.ts",
-    "src/server/useCases/**/*.ts",
-    "src/server/router.ts",
-    "src/server/middlewares/*.ts",
-    "src/openai/*.ts",
-  ],
+  collectCoverageFrom: ["src/openai/*.ts", "src/services/**/*.ts"],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",

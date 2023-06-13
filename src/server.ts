@@ -1,17 +1,19 @@
 import express from "express";
 import "dotenv/config";
 import { OpenaiTravelResponse } from "./openai/openai-travel-response";
+import { Travel_itinerary } from "./services/Travel_itinerary/travel-itinerary";
 
 const server = express();
+server.use(express.json());
 
-server.get("/", async (req, res) => {
-  const getMessage = new OpenaiTravelResponse();
+server.post("/plan", async (req, res) => {
+  const openaiTravelResponse = new OpenaiTravelResponse();
 
-  const message = await getMessage.getTravelResponse(
-    "voÇe sabe qual a melhor rota para ir de regeneração do piaui ate teresina do piaui?"
-  );
+  const travel = new Travel_itinerary(openaiTravelResponse);
 
-  res.status(200).send(message);
+  const travel_itinerary = await travel.getTravel_itinerary(req.body);
+
+  res.status(201).json(travel_itinerary);
 });
 
 const port = process.env.PORT;
