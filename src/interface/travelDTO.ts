@@ -8,3 +8,8 @@ export interface WeatherDTO {
   destination: string;
   start_date: string;
 }
+
+export interface Violence_infoDTO {
+  destination: string;
+  start_date: string;
+}
