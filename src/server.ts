@@ -1,13 +1,13 @@
 import express from "express";
 import "dotenv/config";
-import { GetTravelResponse } from "./openai/get-travel-response";
+import { OpenaiTravelResponse } from "./openai/get-travel-response";
 
 const server = express();
 
 server.get("/", async (req, res) => {
-  const getMessage = new GetTravelResponse();
+  const getMessage = new OpenaiTravelResponse();
 
-  const message = await getMessage.handle(
+  const message = await getMessage.getTravelResponse(
     "voÇe sabe qual a melhor rota para ir de regeneração do piaui ate teresina do piaui?"
   );
 

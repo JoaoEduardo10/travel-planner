@@ -1,12 +1,12 @@
 import { Configuration, OpenAIApi } from "openai";
 
-export class GetTravelResponse {
+export class OpenaiTravelResponse {
   private openaiConfiguration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
   });
   private openai = new OpenAIApi(this.openaiConfiguration);
 
-  async handle(clientText: string): Promise<string> {
+  async getTravelResponse(clientText: string): Promise<string> {
     try {
       const options = {
         model: "text-davinci-003",
@@ -15,12 +15,15 @@ export class GetTravelResponse {
         max_tokens: 4000,
       };
 
-      const response = await this.openai.createCompletion(options);
-      let botResponse = "";
-      response.data.choices.forEach(({ text }) => {
-        botResponse += text;
+      const openaiResponse = await this.openai.createCompletion(options);
+
+      let chatResponse = "";
+
+      openaiResponse.data.choices.forEach(({ text }) => {
+        chatResponse += text;
       });
-      return `${botResponse.trim()}`;
+
+      return `${chatResponse.trim()}`;
     } catch (error: any) {
       return `❌ OpenAI Response Error: ${error.response.data.error.message}`;
     }
