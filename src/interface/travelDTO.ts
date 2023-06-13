@@ -13,3 +13,9 @@ export interface Violence_infoDTO {
   destination: string;
   start_date: string;
 }
+
+export interface BestWayTravelDTO {
+  origin: string;
+  destination: string;
+  start_date: string;
+}
