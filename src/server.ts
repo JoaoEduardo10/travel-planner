@@ -1,6 +1,6 @@
 import express from "express";
 import "dotenv/config";
-import { OpenaiTravelResponse } from "./openai/get-travel-response";
+import { OpenaiTravelResponse } from "./openai/openai-travel-response";
 
 const server = express();
 

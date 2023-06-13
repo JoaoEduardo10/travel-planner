@@ -25,7 +25,7 @@ export class OpenaiTravelResponse {
 
       return `${chatResponse.trim()}`;
     } catch (error: any) {
-      return `❌ OpenAI Response Error: ${error.response.data.error.message}`;
+      return `❌ OpenAI Response Error: ${error.message}`;
     }
   }
 }
