@@ -14,15 +14,15 @@ export const travelMiddleware: RequestHandler<{}, {}, TravelDTO> = async (
   }
 
   if (!origin) {
-    throw new Bad_Request("Adicione uma origem");
+    throw new Bad_Request("Adicione uma origem!");
   }
 
   if (!start_date) {
-    throw new Bad_Request("Adicione a data de partida");
+    throw new Bad_Request("Adicione a data de partida!");
   }
 
   if (!end_date) {
-    throw new Bad_Request("Adicione a data de chegada");
+    throw new Bad_Request("Adicione a data de chegada!");
   }
 
   next();
