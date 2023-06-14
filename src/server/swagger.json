@@ -1,0 +1,90 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API de planejado de viagens",
+    "deacription": "Essa API planeja viagens para voçê, com o auxilio do chatGPT, retornando: Melhor jeito de viajar, taxa de criminalidade, um planejamento de como utilizar bem o seus dias e como vai esta o clima",
+    "termsOfService": "Use com moderação",
+    "contact": {
+      "email": "joaoeduardoj920@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3333/",
+      "description": "Api de desenvolvimento"
+    }
+  ],
+  "paths": {
+    "/plan": {
+      "post": {
+        "summary": "Planejar viagem",
+        "description": "Essa rota será responsável por planejar viagens para você, com o auxílio do ChatGPT. Ela irá fornecer informações como a melhor forma de viajar, taxa de criminalidade, um planejamento para otimizar seus dias e a previsão do clima. Observação: O ChatGPT ainda pode ser um pouco lento.",
+        "tags": ["PLANS"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "$ref": "#/components/schemas/Travel"
+              },
+              "example": {
+                "origin": "teresia-pi",
+                "destination": "são paulo-sp",
+                "start_date": "10/11/2023",
+                "end_date": "20/11/2023"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad_Request"
+          },
+          "201": {
+            "description": "created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Travel"
+                },
+                "example": {
+                  "best_way_travel": "Voçê pode ir de ônibos",
+                  "travel_itinerary": "dia 1 vá em tal lugar, dia 2....",
+                  "weather": "clima quente com a umidade relativa do ar mínima entre 70% e 80%",
+                  "violence_info": "Resposta: A taxa de homicídios em lugar tal foi de 26,1 mortes por 100 mil habitantes em 2019, segundo dados do Fórum Brasileiro de Segurança Pública."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Travel": {
+        "type": "object",
+        "properties": {
+          "origin": {
+            "type": "string",
+            "required": true
+          },
+          "destination": {
+            "type": "string",
+            "required": true
+          },
+          "start_date": {
+            "type": "string",
+            "required": true
+          },
+          "end_date": {
+            "type": "string",
+            "required": true
+          }
+        }
+      }
+    }
+  }
+}
