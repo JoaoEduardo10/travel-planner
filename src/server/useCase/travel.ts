@@ -1,8 +1,8 @@
 import { RequestHandler } from "express";
-import { TravelDTO } from "../interface/travelDTO";
+import { TravelDTO } from "../../interface/travelDTO";
 import { TravelRepository } from "../repositories/create-travel";
 import { TravelController } from "../controllers/create-travel";
-import { Openai } from "../openai/openai";
+import { Openai } from "../../database/openai";
 
 export const travelRouter: RequestHandler<{}, {}, TravelDTO> = async (
   req,

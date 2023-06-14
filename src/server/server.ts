@@ -10,6 +10,4 @@ server.use(express.json());
 server.use(router);
 server.use(globalsErrors);
 
-const port = process.env.PORT;
-
-server.listen(port, () => console.log(`Server listening port ${port}`));
+export { server };

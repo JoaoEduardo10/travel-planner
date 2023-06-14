@@ -1,5 +1,5 @@
 import { Request } from "express";
-import { TravelDTO } from "../interface/travelDTO";
+import { TravelDTO } from "../../interface/travelDTO";
 import { CControllers, MessageBodyDTO, ResponseDTO } from "./protocols";
 import { ITravelRepository } from "../repositories/protocols";
 

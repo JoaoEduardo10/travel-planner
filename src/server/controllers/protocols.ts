@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { TravelDTO } from "../interface/travelDTO";
+import { TravelDTO } from "../../interface/travelDTO";
 
 export interface MessageBodyDTO {
   best_way_travel: string;

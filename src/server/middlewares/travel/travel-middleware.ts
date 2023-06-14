@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
-import { TravelDTO } from "../../interface/travelDTO";
-import { Bad_Request } from "../../errors/api-errors";
+import { TravelDTO } from "../../../interface/travelDTO";
+import { Bad_Request } from "../../../server/errors/api-errors";
 
 export const travelMiddleware: RequestHandler<{}, {}, TravelDTO> = async (
   req,

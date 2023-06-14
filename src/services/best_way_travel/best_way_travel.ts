@@ -1,5 +1,5 @@
 import { BestWayTravelDTO } from "../../interface/travelDTO";
-import { Openai } from "../../openai/openai";
+import { Openai } from "../../database/openai";
 import { Prompt } from "./prompt";
 import { IBestWayTravel } from "./protocols";
 

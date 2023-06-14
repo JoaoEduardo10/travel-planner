@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextFunction, Request, Response } from "express";
-import { ApiErrors } from "../errors/api-errors";
+import { ApiErrors } from "../../server/errors/api-errors";
 
 export const globalsErrors = async (
   error: Error & Partial<ApiErrors>,

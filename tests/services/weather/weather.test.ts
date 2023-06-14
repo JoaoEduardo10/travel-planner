@@ -1,4 +1,4 @@
-import { Openai } from "../../../src/openai/openai";
+import { Openai } from "../../../src/database/openai";
 import { Weather } from "../../../src/services/weather/weather";
 
 describe("Weather", () => {

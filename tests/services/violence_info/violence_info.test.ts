@@ -1,4 +1,4 @@
-import { Openai } from "../../../src/openai/openai";
+import { Openai } from "../../../src/database/openai";
 import { Violence_info } from "../../../src/services/violence_info/violence-info";
 
 describe("Violence_info", () => {

@@ -1,5 +1,5 @@
-import { Openai } from "../../src/openai/openai";
-import { TravelRepository } from "../../src/repositories/create-travel";
+import { Openai } from "../../src/database/openai";
+import { TravelRepository } from "../../src/server/repositories/create-travel";
 
 describe("TravelRepository", () => {
   it("should return trip text promise", () => {

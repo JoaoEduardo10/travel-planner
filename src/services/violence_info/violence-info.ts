@@ -1,5 +1,5 @@
 import { Violence_infoDTO } from "../../interface/travelDTO";
-import { Openai } from "../../openai/openai";
+import { Openai } from "../../database/openai";
 import { Prompt } from "./prompt";
 import { IViolence_info } from "./protocols";
 

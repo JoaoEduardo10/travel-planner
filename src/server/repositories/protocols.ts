@@ -1,4 +1,4 @@
-import { TravelDTO } from "../interface/travelDTO";
+import { TravelDTO } from "../../interface/travelDTO";
 
 export interface ITravelRepository {
   getTravelTextPromise(params: TravelDTO): {

@@ -1,4 +1,4 @@
-import { Openai } from "../../../src/openai/openai";
+import { Openai } from "../../../src/database/openai";
 import { BestWayTravel } from "../../../src/services/best_way_travel/best_way_travel";
 
 describe("Best_way_travel", () => {

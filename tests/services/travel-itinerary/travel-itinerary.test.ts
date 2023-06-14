@@ -1,4 +1,4 @@
-import { Openai } from "../../../src/openai/openai";
+import { Openai } from "../../../src/database/openai";
 import { Travel_itinerary } from "../../../src/services/travel_itinerary/travel-itinerary";
 
 describe("Travel_itinerary", () => {

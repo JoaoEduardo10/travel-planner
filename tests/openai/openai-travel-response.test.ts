@@ -1,6 +1,6 @@
 /* eslint-disable no-self-assign */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Openai } from "../../src/openai/openai";
+import { Openai } from "../../src/database/openai";
 
 describe("Openai", () => {
   let openaiTravelResponse: Openai;

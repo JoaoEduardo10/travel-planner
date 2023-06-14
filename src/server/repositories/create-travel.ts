@@ -1,9 +1,9 @@
-import { TravelDTO } from "../interface/travelDTO";
-import { Openai } from "../openai/openai";
-import { BestWayTravel } from "../services/best_way_travel/best_way_travel";
-import { Travel_itinerary } from "../services/travel_itinerary/travel-itinerary";
-import { Violence_info } from "../services/violence_info/violence-info";
-import { Weather } from "../services/weather/weather";
+import { TravelDTO } from "../../interface/travelDTO";
+import { Openai } from "../../database/openai";
+import { BestWayTravel } from "../../services/best_way_travel/best_way_travel";
+import { Travel_itinerary } from "../../services/travel_itinerary/travel-itinerary";
+import { Violence_info } from "../../services/violence_info/violence-info";
+import { Weather } from "../../services/weather/weather";
 import { ITravelRepository } from "./protocols";
 
 export class TravelRepository implements ITravelRepository {

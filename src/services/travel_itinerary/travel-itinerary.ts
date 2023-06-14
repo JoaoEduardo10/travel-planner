@@ -1,5 +1,5 @@
 import { Travel_itineraryDTO } from "../../interface/travelDTO";
-import { Openai } from "../../openai/openai";
+import { Openai } from "../../database/openai";
 import { Prompt } from "./prompt";
 import { ITravel_itinerary } from "./protocols";
 
