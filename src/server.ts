@@ -1,15 +1,14 @@
+import "express-async-errors";
 import express from "express";
 import "dotenv/config";
-import { Openai } from "./openai/openai";
-import { BestWayTravel } from "./services/best_way_travel/best_way_travel";
-import { TravelController } from "./controllers/create-travel";
+import { travelRouter } from "./useCase/travel";
+import { globalsErrors } from "./middlewares/global-errors";
 
 const server = express();
 server.use(express.json());
 
-const travel = new TravelController();
-
-server.post("/plan", travel.handle);
+server.post("/plan", travelRouter);
+server.use(globalsErrors);
 
 const port = process.env.PORT;
 
