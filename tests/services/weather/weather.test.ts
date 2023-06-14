@@ -1,9 +1,9 @@
-import { OpenaiTravelResponse } from "../../../src/openai/openai-travel-response";
+import { Openai } from "../../../src/openai/openai";
 import { Weather } from "../../../src/services/weather/weather";
 
 describe("Weather", () => {
   it("should return a weather forecast", async () => {
-    const openaiTravelResponse = new OpenaiTravelResponse();
+    const openaiTravelResponse = new Openai();
 
     const weather = new Weather(openaiTravelResponse);
 

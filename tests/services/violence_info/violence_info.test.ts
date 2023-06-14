@@ -1,9 +1,9 @@
-import { OpenaiTravelResponse } from "../../../src/openai/openai-travel-response";
+import { Openai } from "../../../src/openai/openai";
 import { Violence_info } from "../../../src/services/violence_info/violence-info";
 
 describe("Violence_info", () => {
   it("should return information, criminality actions", async () => {
-    const openaiTravelResponse = new OpenaiTravelResponse();
+    const openaiTravelResponse = new Openai();
 
     const violence_info = new Violence_info(openaiTravelResponse);
 

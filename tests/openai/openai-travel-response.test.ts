@@ -1,14 +1,14 @@
 /* eslint-disable no-self-assign */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { OpenaiTravelResponse } from "../../src/openai/openai-travel-response";
+import { Openai } from "../../src/openai/openai";
 
-describe("OpenaiTravelResponse", () => {
-  let openaiTravelResponse: OpenaiTravelResponse;
+describe("Openai", () => {
+  let openaiTravelResponse: Openai;
 
   beforeAll(() => {
     process.env.OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-    openaiTravelResponse = new OpenaiTravelResponse();
+    openaiTravelResponse = new Openai();
   });
 
   afterEach(() => {
@@ -16,7 +16,7 @@ describe("OpenaiTravelResponse", () => {
   });
 
   it("should return a gpt chat response", async () => {
-    const travelResponse = await openaiTravelResponse.getTravelResponse(
+    const travelResponse = await openaiTravelResponse.getOpenaiResponseText(
       "retorne para mim esta palavara test com a letra t sempre minuscula e sempre completa"
     );
 
@@ -27,9 +27,9 @@ describe("OpenaiTravelResponse", () => {
   it("should return an error when trying to return a responsee", async () => {
     process.env.OPENAI_API_KEY = undefined;
 
-    const openaiTravelResponse2 = new OpenaiTravelResponse();
+    const openaiTravelResponse2 = new Openai();
 
-    const travelResponse = await openaiTravelResponse2.getTravelResponse(
+    const travelResponse = await openaiTravelResponse2.getOpenaiResponseText(
       "test"
     );
 

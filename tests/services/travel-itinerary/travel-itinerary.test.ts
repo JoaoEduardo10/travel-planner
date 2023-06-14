@@ -1,9 +1,9 @@
-import { OpenaiTravelResponse } from "../../../src/openai/openai-travel-response";
+import { Openai } from "../../../src/openai/openai";
 import { Travel_itinerary } from "../../../src/services/travel_itinerary/travel-itinerary";
 
 describe("Travel_itinerary", () => {
   it("should return a travel plan", async () => {
-    const openaiTravelResponse = new OpenaiTravelResponse();
+    const openaiTravelResponse = new Openai();
 
     const travel = new Travel_itinerary(openaiTravelResponse);
 

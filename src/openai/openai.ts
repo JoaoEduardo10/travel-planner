@@ -1,12 +1,12 @@
 import { Configuration, OpenAIApi } from "openai";
 
-export class OpenaiTravelResponse {
+export class Openai {
   private openaiConfiguration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
   });
   private openai = new OpenAIApi(this.openaiConfiguration);
 
-  async getTravelResponse(clientText: string): Promise<string> {
+  async getOpenaiResponseText(clientText: string): Promise<string> {
     try {
       const options = {
         model: "text-davinci-003",
