@@ -24,6 +24,7 @@ export default {
     "src/openai/*.ts",
     "src/services/**/*.ts",
     "src/repositories/*.ts",
+    "src/controllers/*.ts",
   ],
 
   // The directory where Jest should output its coverage files

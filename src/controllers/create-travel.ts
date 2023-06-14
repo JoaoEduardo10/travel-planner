@@ -1,6 +1,6 @@
 import { Request } from "express";
 import { TravelDTO } from "../interface/travelDTO";
-import { CControllers, MessageBodyDTO, ResponseDTO } from "./protcols";
+import { CControllers, MessageBodyDTO, ResponseDTO } from "./protocols";
 import { ITravelRepository } from "../repositories/protocols";
 
 export class TravelController implements CControllers {
