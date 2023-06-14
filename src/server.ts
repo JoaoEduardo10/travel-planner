@@ -1,13 +1,13 @@
 import "express-async-errors";
 import express from "express";
 import "dotenv/config";
-import { travelRouter } from "./useCase/travel";
 import { globalsErrors } from "./middlewares/global-errors";
+import { router } from "./router";
 
 const server = express();
 server.use(express.json());
 
-server.post("/plan", travelRouter);
+server.use(router);
 server.use(globalsErrors);
 
 const port = process.env.PORT;
