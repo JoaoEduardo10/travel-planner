@@ -1,7 +1,7 @@
 import { BestWayTravelDTO } from "../../interface/travelDTO";
 
 export class Prompt {
-  getWeatherText(params: BestWayTravelDTO): string {
+  getBestWayTravelText(params: BestWayTravelDTO): string {
     const { destination, origin, start_date } = params;
 
     return `Sei que Voçê é uma inteigencia artificial.mas voçê vai se parsar por um especialista em viagens.
