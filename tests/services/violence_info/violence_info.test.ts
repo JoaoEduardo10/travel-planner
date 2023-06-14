@@ -13,5 +13,5 @@ describe("Violence_info", () => {
     });
 
     expect(response).toBeTruthy();
-  }, 10000);
+  });
 });
