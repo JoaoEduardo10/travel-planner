@@ -1,7 +1,7 @@
-import { TravelController } from "../../src/server/controllers/create-travel";
-import { TravelRepository } from "../../src/server/repositories/create-travel";
-import { Openai } from "../../src/database/openai";
-import { TravelDTO } from "../../src/interface/travelDTO";
+import { TravelController } from "../../../src/server/controllers/create-travel";
+import { TravelRepository } from "../../../src/server/repositories/create-travel";
+import { Openai } from "../../../src/database/openai";
+import { TravelDTO } from "../../../src/interface/travelDTO";
 
 export interface IMockReq {
   req: {

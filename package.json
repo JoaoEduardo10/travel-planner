@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "test": "jest --watchAll --testTimeout=50000"
+    "test": "jest --watchAll --detectOpenHandles --testTimeout=50000"
   },
   "devDependencies": {
     "@swc/core": "^1.3.63",

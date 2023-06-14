@@ -1,4 +1,4 @@
-import { serverTest } from "./jest.setup";
+import { serverTest } from "../jest.setup";
 
 describe("server Travel-Planner", () => {
   it("should return all travelogue with status code 201", async () => {

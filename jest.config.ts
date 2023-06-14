@@ -21,17 +21,23 @@ export default {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
-    "src/openai/*.ts",
+    "src/database/*.ts",
     "src/services/**/*.ts",
-    "src/repositories/*.ts",
-    "src/controllers/*.ts",
+    "src/server/repositories/*.ts",
+    "src/server/controllers/*.ts",
+    "src/server/server.ts",
+    "src/server/middlewares/**/*.ts",
   ],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ["/node_modules/", "/protocols.ts"],
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "/protocols.ts",
+    "/global-errors.ts",
+  ],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",

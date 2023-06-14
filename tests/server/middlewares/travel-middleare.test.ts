@@ -1,4 +1,4 @@
-import { serverTest } from "../jest.setup";
+import { serverTest } from "../../jest.setup";
 
 describe("travelMiddleware", () => {
   it("should return an error for not sending the destination", async () => {
