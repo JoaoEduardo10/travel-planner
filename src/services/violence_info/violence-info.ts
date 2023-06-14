@@ -4,18 +4,18 @@ import { Prompt } from "./prompt";
 import { IViolence_info } from "./protocols";
 
 export class Violence_info implements IViolence_info {
-  private prompt = new Prompt();
+  private prompt: Prompt;
 
-  constructor(private readonly openaiTravelResponse: Openai) {}
+  constructor(private readonly openaiClient: Openai) {
+    this.prompt = new Prompt();
+  }
 
   async getViolence_info(params: Violence_infoDTO): Promise<string> {
     const { destination, start_date } = params;
 
-    const prompt = this.prompt.getWeatherText(destination, start_date);
+    const prompt = this.prompt.getViolenceInfoText(destination, start_date);
 
-    const violence_info = await this.openaiTravelResponse.getOpenaiResponseText(
-      prompt
-    );
+    const violence_info = await this.openaiClient.getOpenaiResponseText(prompt);
 
     return violence_info;
   }

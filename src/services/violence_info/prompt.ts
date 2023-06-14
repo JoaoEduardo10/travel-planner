@@ -1,5 +1,5 @@
 export class Prompt {
-  getWeatherText(destination: string, start_date: string): string {
+  getViolenceInfoText(destination: string, start_date: string): string {
     return `Sei que Voçê é uma inteigencia artificial.
       mas voçê vai se parsar por um especialista criminal.
       vou viajar para ${destination} no dia ${start_date}. 
