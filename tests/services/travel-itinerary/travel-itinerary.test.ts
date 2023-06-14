@@ -14,5 +14,5 @@ describe("Travel_itinerary", () => {
     });
 
     expect(travel_itinerary).toBeTruthy();
-  }, 20000);
+  });
 });

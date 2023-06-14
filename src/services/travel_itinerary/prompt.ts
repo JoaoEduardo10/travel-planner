@@ -1,5 +1,5 @@
 export class Prompt {
-  getTravel_itineraryText(
+  getTravelItineraryText(
     destination: string,
     start_date: string,
     end_date: string
